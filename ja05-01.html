@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <head>
+    <script>
+      // 문제 3) 사용자 입력을 통해서 국어, 점수, 수학 과목의 점수를 입력받고, 입력 받은 점수를
+      // 배열 scores에 차례대로 저장한 후 총점과 평균값을 출력하는 프로그램을 작성하세요.
+      var scores = [];
+      var score;
+      score = prompt("국어 점수를 입력해 주세요");
+      scores[0] = Number(score);
+      score = prompt("영어 점수를 입력해 주세요");
+      scores[1] = Number(score);
+      score = prompt("수학 점수를 입력해 주세요");
+      scores[2] = Number(score);
+
+      var total = 0;
+      var avg = 0;
+
+      for (var i = 0; i < scores.length; i++) {
+        total = total + scores[i];
+      }
+
+      avg = total / scores.length;
+
+      console.log("국어, 영어, 수학의 총점은 " + total + "점 입니다");
+      console.log("국어, 영어, 수학의 평균은 " + avg + "점 입니다.");
+
+
+      console.log("\n-------- 문제4-------\n");
+      // 문제 4) 문제 3의 소스내용을 수정하여 사용자 입력부분과 총합 및 평균을 내는 부분을
+      // 함수로 만들어서 실행하는 프로그램으로 수정하세요
+      // 함수명 : inputScore, totalScore, avgScore
+      function inputScore(){
+          for (var i = 0; i < 3; i++){
+
+              score = prompt("점수를 입력해 주세요");
+              scores[i] = Number
+              scores[0] = Number(score);
+            }
+
+      }
+
+      function totalScore(){
+          var total = [];
+
+          for (var i = 0; i < scores.length; i++) {
+              total = total + scores[i];
+          }
+
+      }
+      function avgScore(total){
+      var avg = 0;
+        avg = total / scores.length;
+
+        return avg;
+      }
+    var scores = [];
+    var tScore
+    var aScore;
+
+    inputScore();
+    tScore = totalscore();
+    aScore = avgScore();
+    
+    console.log("국어, 영어, 수학의 총점은 " +tScore + "점 입니다.");
+    console.log("국어, 영어, 수학의 평균은 " +aScore + "점 입니다.");
+    
+    </script>
+  </head>
+  <body></body>
+</html>
